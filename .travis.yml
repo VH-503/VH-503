@@ -3,6 +3,21 @@ language: java
 before_install:
   - mvn -N io.takari:maven:wrapper
   - mvn clean package
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: us-east-1
+  app: spring-boot-demo
+  env: Springbootdemo-env
+  bucket_name: elasticbeanstalk-us-east-1-459258928607
+  bucket_path: spring-boot-demo
+  on:
+    branch: master
+      
+
+
+
 
 
 
