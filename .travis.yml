@@ -4,4 +4,4 @@ before_install:
   - mvn -N io.takari:maven:wrapper
   - mvn clean package
 
-  
+
